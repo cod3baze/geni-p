@@ -1,0 +1,44 @@
+div#container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  background: #212134;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+/* "ASIDE STYLUS" */
+div#container aside#form-aside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+aside#form-aside div#anuncios {
+  margin: 30px;
+}
+
+aside#form-aside div#anuncios h3 {
+  font-size: 60px;
+}
+
+p#text-limited {
+  max-width: 400px;
+  color: #999;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+aside#form-aside div#ilustry {
+  margin: -90px 30px;
+}
+
+/* "MAIN STYLUS" */
+div#container main#form-main {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  margin: 140px auto;
+}

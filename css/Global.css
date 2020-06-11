@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: rgb(33, 34, 44);
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #f6f8fa;
+}
+
+div.App {
+  display: flex;
+  justify-content: flex-start;
+  background: #f6f8fa;
+}
+
+ul li {
+  list-style: none;
+}
+
+button.new {
+  border: 0;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #58bb;
+  color: #fff;
+}
+
+button.new:hover {
+  background: #58bb62;
+}
+
+.sttrong {
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.hr {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+}
+
+.items-icon {
+  height: 15px;
+  width: 15px;
+  margin: auto 0;
+  margin-right: 5px;
+}
+
+.notifications {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.notifications:hover {
+  background-color: #6272a4;
+}
