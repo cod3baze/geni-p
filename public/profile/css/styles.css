@@ -1,0 +1,271 @@
+div#profile-unic-user {
+  /* padding-top: 60px; */
+  display: flex;
+  flex-direction: row;
+}
+
+/* "ASIDE STYLUS USER PROFILE" */
+
+div#profile-unic-user aside#user-aside-overview {
+  background: #ebf3ff;
+  height: 100vh;
+  width: 300px;
+  padding-top: 60px;
+}
+
+@media (max-width: 900px) {
+  div#profile-unic-user aside#user-aside-overview {
+    display: none;
+  }
+}
+
+aside#user-aside-overview div#user-overview {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+span#badge-overview {
+  position: absolute;
+  left: 33px;
+  top: 100px;
+  color: #222;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  line-height: 12px;
+  font-size: 13px;
+  font-family: "Roboto mono", Arial, Helvetica, sans-serif;
+}
+
+aside#user-aside-overview div#user-overview div {
+  display: flex;
+  margin: 10px;
+}
+
+div#user-overview div strong {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+aside#user-aside-overview div#user-overview button {
+  background-color: #8ab4f2;
+  height: 20px;
+}
+
+aside#user-aside-overview div#user-overview button:hover {
+  background-color: #8da1be;
+}
+
+aside#user-aside-overview div#about-user-overview {
+  padding: 0 30px;
+}
+
+div#about-user-overview div#about-over {
+  margin-top: 20px;
+}
+
+div#about-user-overview div#about-over h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+div#about-user-overview div#about-over p {
+  margin-left: 10px;
+  color: #555;
+}
+
+/* "MAIN STYLUS USER PROFILE" */
+
+div#profile-unic-user main#user-main-overview {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+main#user-main-overview div ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 40px;
+  margin-top: 30px;
+}
+
+main#user-main-overview div ul li {
+  color: #858585;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  padding-left: 70px;
+  cursor: pointer;
+}
+
+div ul#menu-choose-over li:hover {
+  text-decoration: underline;
+}
+
+div ul#menu-choose-over li.menuSelected {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  main#user-main-overview div ul {
+    padding-left: 5px;
+    margin-top: 30px;
+  }
+
+  main#user-main-overview div ul li {
+    font-size: 16px;
+    padding-left: 30px;
+  }
+}
+
+/* "OVERVIEW STYLUS PROFILE" */
+
+div#overview-container {
+  padding: 40px;
+  width: 900px;
+}
+
+div#overview-container div#view-activi h5 {
+  color: #999;
+  font-family: "Roboto mono", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+div#overview-container div#view-activi div#vw-act {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+}
+
+div#view-activi div#vw-act div#learing-activity:hover {
+  border-color: #8ab4f210;
+  box-shadow: 0 0 4px black;
+}
+
+#learing-activity {
+  cursor: pointer;
+}
+
+div#view-activi div#vw-act div#learing-activity {
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  margin-left: 20px;
+}
+
+div#vw-act div#learing-activity strong {
+  color: antiquewhite;
+}
+
+div#vw-act div#learing-activity p {
+  color: #888;
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+div#vw-act div#learing-activity span {
+  display: block;
+  color: #555;
+}
+
+div#overview-container div#view-steps {
+  margin-top: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+
+div#overview-container div#view-steps p {
+  color: #ebf3ff;
+  font-size: 14px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+div#overview-container div#view-steps ul {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+li#first,
+li#second,
+li#three {
+  height: 15px;
+  width: 300px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+div#view-steps ul li#first {
+  background-color: #ffb86c;
+  /* Leitura de issue */
+}
+
+div#view-steps ul li#second {
+  background-color: #8be9fd;
+  /* Indicação de issue */
+}
+
+div#view-steps ul li#three {
+  background-color: #bd93f9;
+  /* Criação de issue */
+}
+
+/* "HANDLE APPROX STYLUS PROFILE" */
+
+div#approximations {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 16px;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+div#approximations div {
+  display: flex;
+  flex-direction: row;
+  width: 270px;
+  max-width: 350px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+div#approximations div#approax p {
+  color: #8ab4f2;
+}
+
+div#approximations div#approax div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+div#approximations div#approax div strong {
+  color: #fff;
+  border-radius: 10px;
+  width: 30px;
+}
+
+div#approximations div button {
+  background-color: #f6f8fa;
+  padding: 3px;
+}
+
+div#approximations div button:hover {
+  background-color: #8ab4f2;
+  color: #fff;
+}
+
+/* "ASIDE STYLUS USER PROFILE" */

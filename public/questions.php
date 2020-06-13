@@ -4,19 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/Global.css" />
   <link rel="stylesheet" href="../css/App.css" />
   <link rel="stylesheet" href="../css/Questions.css" />
-  <title>WELCOME | Genesis</title>
+  <title>Questions | Genesis</title>
 </head>
 
 <body>
   <?php require('../components/header.php') ?>
-  <div id="questions-frame">
+  <form id="questions-frame">
     <div id="welcome-question">
       <h2>Bem vindo a plataforma</h2>
       <p>
@@ -27,67 +24,67 @@
     </div>
     <div id="questions-group">
       <h3>Qual tipo de trabalho voçê faz, principalmente</h3>
-      <ul id="questions">
-        <li class="selected">
+      <selection name="work" id="questions">
+        <option value="1" class="selected">
           <strong>Software Enginner</strong>
           <p>Eu codifico</p>
-        </li>
+        </option>
 
-        <li class="selected">
-          <strong>UX & Design</strong>
-          <p>Eu desenho interfaces</p>
-        </li>
-
-        <li class="selected">
+        <option value="2">
           <strong>Técnico de rede</strong>
           <p>Eu gerencio rede</p>
-        </li>
+        </option>
 
-        <li class="selected">
+        <option value="3">
           <strong>Segurança da informação</strong>
           <p>Mantenho a infra segura</p>
-        </li>
-      </ul>
+        </option>
+
+        <option value="4">
+          <strong>Segurança da informação</strong>
+          <p>Mantenho a infra segura</p>
+        </option>
+      </selection>
     </div>
 
     <div id="questions-group">
       <h3>Quanta experiência voçê tem?</h3>
-      <ul id="questions">
-        <li class="selected">
+      <selection id="questions">
+        <option>
           <strong>Nenhuma</strong>
           <p>Eu nunca programei</p>
-        </li>
+        </option>
 
-        <li class="selected">
+        <option>
           <strong>Um pouco</strong>
           <p>Eu desenho interfaces</p>
-        </li>
+        </option>
 
-        <li class="selected">
+        <option>
           <strong>Quantidade moderada</strong>
           <p>Tenho alguma experiência</p>
-        </li>
+        </option>
 
-        <li class="selected">
+        <option class="selected">
           <strong>Muita</strong>
           <p>Sou muito experiênte</p>
-        </li>
-      </ul>
+        </option>
+      </selection>
     </div>
 
     <div className="last" id="questions-group">
       <h3>Qual o seu plano ao usar a plataforma?</h3>
-      <ul id="questions">
-        <li class="selected">
+      <selection id="questions">
+        <option class="selected">
           <strong>Aprender</strong>
           <p>Pronto pra decolar</p>
-        </li>
+        </option>
 
-        <li class="selecte">
+        <option class="selecte">
           <strong>(+) Ensinar</strong>
           <p>Quero passar oque já sei,...</p>
-        </li>
-      </ul>
+        </option>
+      </selection>
     </div>
 
     <div id="finished-questions">
@@ -98,15 +95,13 @@
           Vamos conectar voçê com comcomunidades e projetos do seu interesse.
         </p>
       </div>
-      <button id="setup">
+      <button type="submit" name="setup" id="setup">
         Completar setup
       </button>
     </div>
-  </div>
+  </form>
 
-  <script>
-    feather.replace()
-  </script>
+  <script src="../src/services/functions.js"></script>
 </body>
 
 </html>
