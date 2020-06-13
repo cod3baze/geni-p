@@ -17,48 +17,9 @@
 <body>
 
   <div class="App">
-    <div id="header">
-      <nav>
-        <div>
-          <input placeholder="Search or jump to" type="search" name="search" id="search-bar" />
-        </div>
-
-        <ul class="list-item-group">
-          <li id="menu-group">
-            <a id="menu-item" href="/web">
-              Recomendations
-            </a>
-          </li>
-          <li id="menu-group">
-            <a id="menu-item" href="/web">
-              Issues
-            </a>
-          </li>
-          <li id="menu-group">
-            <a id="menu-item" href="/web">
-              Marketplace
-            </a>
-          </li>
-          <li id="menu-group">
-            <a id="menu-item" href="/web">
-              Explore
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div id="session-group">
-        <div class="notifications">
-          <i data-feather="activity"></i>
-        </div>
-        <div class="notifications">
-          <i data-feather="activity"></i>
-        </div>
-        <div class="notifications">
-          <i data-feather="activity"></i>
-        </div>
-      </div>
-    </div>
+    <?php
+    require('../components/header.php')
+    ?>
 
     <aside id="aside">
       <div id="top-aside">
@@ -80,7 +41,7 @@
           <li>
             <a href="/web">
               <span class="items-icon">
-                <FiActivity color="#FFFFA5" />
+                <i color="#FFFFA5" data-feather="activity"></i>
               </span>
               <span>Eliasallex/Dotnet</span>
             </a>
@@ -88,7 +49,7 @@
           <li>
             <a href="/web">
               <span class="items-icon">
-                <FiActivity color="#FFFFA5" />
+                <i color="#FFFFA5" data-feather="activity"></i>
               </span>
               <span>Eliasallex/Boas-Praticas</span>
             </a>
@@ -96,7 +57,7 @@
           <li>
             <a href="/web">
               <span class="items-icon">
-                <FiActivity color="#FFFFA5" />
+                <i color="#FFFFA5" data-feather="activity"></i>
               </span>
               <span>Eliasallex/SistemasOperacionais</span>
             </a>
@@ -104,7 +65,7 @@
           <li>
             <a href="/web">
               <span class="items-icon">
-                <FiActivity color="#FFFFA5" />
+                <i color="#FFFFA5" data-feather="activity"></i>
               </span>
               <span>Eliasallex/Node.JS</span>
             </a>
