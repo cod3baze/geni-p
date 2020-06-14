@@ -1,3 +1,9 @@
+<?php
+require('../src/database/connection.php');
+
+$user = isset($_GET["user"]) ? $_GET["user"] : null;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,20 +26,20 @@
 
   <div class="App">
     <?php
-    echo "
-      <script>
-        var isAuthenticated = window.isAuthenticated;
-        isAuthenticated();
-      </script>
-    ";
-
-    require('../components/header.php')
+    require('../components/header.php');
     ?>
 
     <aside id="aside">
       <div id="top-aside">
         <div id="user-aside">
-          <strong>Elias Alexandre</strong>
+          <?php
+          $sql = "SELECT * FROM users WHERE id='$user'";
+          $resul_user = mysqli_query($link, $sql);
+
+          while ($dtUsr = mysqli_fetch_array($resul_user)) {
+            echo "<strong>" . $dtUsr["name"] . "</strong>";
+          }
+          ?>
         </div>
         <div id="aside-repo">
           <div>
@@ -47,38 +53,22 @@
       </div>
       <div id="navigation-aside">
         <ul id="aside-items-group">
-          <li>
-            <a href="/web">
-              <span class="items-icon">
-                <i color="#FFFFA5" data-feather="activity"></i>
-              </span>
-              <span>Eliasallex/Dotnet</span>
-            </a>
-          </li>
-          <li>
-            <a href="/web">
-              <span class="items-icon">
-                <i color="#FFFFA5" data-feather="activity"></i>
-              </span>
-              <span>Eliasallex/Boas-Praticas</span>
-            </a>
-          </li>
-          <li>
-            <a href="/web">
-              <span class="items-icon">
-                <i color="#FFFFA5" data-feather="activity"></i>
-              </span>
-              <span>Eliasallex/SistemasOperacionais</span>
-            </a>
-          </li>
-          <li>
-            <a href="/web">
-              <span class="items-icon">
-                <i color="#FFFFA5" data-feather="activity"></i>
-              </span>
-              <span>Eliasallex/Node.JS</span>
-            </a>
-          </li>
+          <?php
+          $sql = "SELECT ise.link FROM users AS usr JOIN issue AS ise ON usr.id = ise.owner;";
+          $res_usr_ise = mysqli_query($link, $sql);
+          while ($dtIssue = mysqli_fetch_array($res_usr_ise)) {
+
+            echo
+              "<li>" .
+                "<a href='/web'>
+                  <span class='items-icon'>
+                    <i color='#FFFFA5' data-feather='activity'></i>
+                  </span>
+                  <span>" . $dtIssue["link"] . "</span>
+                </a>
+              </li>";
+          }
+          ?>
         </ul>
       </div>
       <div id="footer">
@@ -99,6 +89,10 @@
 
   <script>
     feather.replace()
+  </script>
+  <script>
+    var isAuthenticated = window.isAuthenticated;
+    isAuthenticated();
   </script>
 </body>
 

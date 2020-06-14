@@ -6,22 +6,22 @@
 
     <ul class="list-item-group">
       <li id="menu-group">
-        <a id="menu-item" href="/web/recomendations.php">
+        <a id="menu-item" href="/web/public/recomendations.php">
           Recomendations
         </a>
       </li>
       <li id="menu-group">
-        <a id="menu-item" href="/web/issues.php">
+        <a id="menu-item" href="/web/public/issues.php">
           Issues
         </a>
       </li>
       <li id="menu-group">
-        <a id="menu-item" href="/web/marketplace.php">
+        <a id="menu-item" href="/web/public/marketplace.php">
           Marketplace
         </a>
       </li>
       <li id="menu-group">
-        <a id="menu-item" href="/web">
+        <a id="menu-item" href="/web/public/home.php">
           Explore
         </a>
       </li>

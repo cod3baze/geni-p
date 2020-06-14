@@ -56,7 +56,10 @@
           $dt_query = mysqli_query($link, $dt_sql);
           $user_id = "user_id";
           $nm = "name";
-          while ($qr = mysqli_fetch_array($dt_query) or die("Usuário já cadastrado!")) {
+          while ($qr = mysqli_fetch_array($dt_query)) {
+            $user =  $qr["id"];
+            $usrname =  $qr["name"];
+
             echo
               "<script>"
                 . "var setCookiee = window.setCookie;"
@@ -66,7 +69,7 @@
             echo "<br/><br/><br/>";
             echo
               "<script>
-                window.location.href = 'http://localhost/web/public/home.php'
+                window.location.href = 'http://localhost/web/public/home.php?user=" . $user . "'
               </script>";
           }
         } else {
@@ -76,8 +79,11 @@
       ?>
     </div>
   </div>
+  <script>
+    var isAuth = window.isAuthenticated;
+    isAuth();
+  </script>
 
-  <script src="./src/services/middleware/useCookies.js"></script>
   <script src="./src/services/index.js"></script>
 </body>
 
