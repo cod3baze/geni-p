@@ -26,24 +26,25 @@ function getCookie(cname) {
   }
   return "";
 }
+window.getCookie = getCookie
 
 function getLocalStorage(name) {
   localStorage.getItem(String(name))
 }
+window.getLocalStorage = getLocalStorage
 
 // HANDLERS
-function checkCookie() {
+function checkCookieAndRedirect() {
   var user = getCookie("username");
   if (user != "") {
-    alert("Welcome again " + user);
+    alert("Usuário já esta autheticado! " + user);
+    window.location.href = "http://localhost/web/public/home.php";
   } else {
-    user = prompt("Please enter your name:", "");
-    if (user != "" && user != null) {
-      setCookie("username", user, 365);
-    }
+    alert("Bem vindo!")
   }
 }
 
 function clearCookie(cname) {
-  return document.cookie
+  document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }

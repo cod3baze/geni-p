@@ -7,6 +7,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="./src/services/middleware/useCookies.js"></script>
+  <script src="./src/services/middleware/auth.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/Global.css" />
   <link rel="stylesheet" href="./css/Auth.css" />
@@ -55,13 +56,18 @@
           $dt_query = mysqli_query($link, $dt_sql);
           $user_id = "user_id";
           $nm = "name";
-          while ($qr = mysqli_fetch_array($dt_query)) {
+          while ($qr = mysqli_fetch_array($dt_query) or die("Usuário já cadastrado!")) {
             echo
               "<script>"
                 . "var setCookiee = window.setCookie;"
                 . "setCookiee(" . "'user_id'" . " ," . $qr["id"] . ", 10);"
-                . "setCookie(" . "'usernamex'" . " '$qr[$nm]' " . "10)"
+                . "setCookiee(" . "'username'," . "'$qr[$nm]'" . ", 10)"
                 . "</script>";
+            echo "<br/><br/><br/>";
+            echo
+              "<script>
+                window.location.href = 'http://localhost/web/public/home.php'
+              </script>";
           }
         } else {
           echo "<script>alert('Insere os dados correspondentes!')</script>";
