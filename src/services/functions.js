@@ -1,4 +1,3 @@
-function handleQuestionsSelected(element, id) {
-  console.log(element)
-  console.log(id)
+function goToSettings() {
+  window.location.href = "http://localhost/web/public/settingsy.php"
 }

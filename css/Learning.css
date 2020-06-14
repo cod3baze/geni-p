@@ -1,0 +1,130 @@
+div#learning-screen-vw {
+  display: flex;
+  flex-direction: row;
+  padding-top: 60px;
+  height: 100%;
+}
+
+/* ASIDE LESSON LEARNING */
+
+div#learning-screen-vw aside#learning-vw {
+  width: 280px;
+  background: #19181f;
+  position: fixed;
+  height: 500px;
+  margin-top: 30px;
+  border-radius: 6px;
+}
+
+@media (max-width: 800px) {
+  div#learning-screen-vw aside#learning-vw {
+    display: none;
+  }
+}
+
+div#learn-theme-group h3 {
+  padding: 30px;
+}
+
+div#learning-lessons ul li {
+  background: #232229;
+  margin-bottom: 5px;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+div#learning-lessons ul li span {
+  font-size: 14px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+div#learning-lessons ul li.isLearning {
+  background: #28272f;
+  box-shadow: 0 0 2px #6272a4;
+  color: #d8d6d6;
+}
+
+/* MAIN LESSON LEARNING */
+
+div#learning-screen-vw main#learning-vw {
+  margin: 30px 320px;
+  /* width: 100%; */
+}
+
+@media (max-width: 800px) {
+  div#learning-screen-vw main#learning-vw {
+    margin-left: 0;
+  }
+}
+
+/* MARKDOWN */
+main#learning-vw div#transcription {
+  position: relative;
+  background: #19181f;
+  border-radius: 5px;
+  padding: 10px;
+  width: 800px;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+@media (max-width: 1130px) {
+  main#learning-vw div#transcription {
+    width: 150%;
+  }
+}
+
+@media (max-width: 800px) {
+  main#learning-vw div#transcription {
+    width: 100vw;
+  }
+}
+
+div#transcription h1,
+div#transcription h2,
+div#transcription h3,
+div#transcription h4,
+div#transcription h5,
+div#transcription p {
+  margin: 15px 0;
+  color: #fff;
+}
+
+div#transcription h1 {
+  font-size: 25px;
+}
+
+div#transcription h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+div#transcription h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+div#transcription h4 {
+  font-size: 16px;
+}
+
+div#transcription h5 {
+  font-size: 15px;
+}
+
+div#transcription p {
+  line-height: 1.6em;
+  color: #d4d3d6;
+}
+
+div#transcription a {
+  color: #7159c1;
+}
+
+div#transcription pre {
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 22px;
+}

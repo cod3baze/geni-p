@@ -28,7 +28,7 @@
           </span>
           <strong>Elias alexandre</strong>
         </div>
-        <button onClick={goToSettings}>Editar Usuário</button>
+        <button onclick="goToSettings()">Editar Usuário</button>
       </div>
       <div id="about-user-overview">
         <div id="about-over">
@@ -47,18 +47,18 @@
     <main id="user-main-overview">
       <div id="main-menu-choose">
         <ul id="menu-choose-over">
-          <li>
+          <a href="/web/public/profile/overview.php">
             Overview
-          </li>
-          <li>
+          </a>
+          <a href="/web/public/profile/stars.php">
             Stars
-          </li>
-          <li class="menuSelected">
+          </a>
+          <a class="menuSelected" href="/web/public/profile/approximate.php">
             Approximate
-          </li>
-          <li>
+          </a>
+          <a href="/web/public/profile/approximations.php">
             Approximations
-          </li>
+          </a>
         </ul>
       </div>
 
@@ -110,6 +110,7 @@
     <script>
       feather.replace()
     </script>
+    <script src="../../src/services/functions.js"></script>
 </body>
 
 </html>

@@ -94,22 +94,22 @@ main#user-main-overview div ul {
   margin-top: 30px;
 }
 
-main#user-main-overview div ul li {
+main#user-main-overview div ul a {
   color: #858585;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 21px;
   padding-left: 70px;
   cursor: pointer;
 }
 
-div ul#menu-choose-over li:hover {
+div ul#menu-choose-over a:hover {
   text-decoration: underline;
 }
 
-div ul#menu-choose-over li.menuSelected {
+div ul#menu-choose-over a.menuSelected {
   color: #fff;
 }
 
