@@ -24,7 +24,11 @@ div#header nav {
   margin: 0 30px;
 }
 
-div#header nav div input {
+div#header nav div {
+  position: relative;
+}
+
+div#header nav div form input {
   width: 274.7px;
   min-height: 28px;
   line-height: 20px;
@@ -37,6 +41,27 @@ div#header nav div input {
   padding: 0 10px;
   font-size: 16px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+div#header nav div form button#search-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  min-height: 28px;
+  line-height: 20px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+div#header nav div form button#search-button:hover {
+  background-color: #bd93f9;
+  color: #f8f8fa;
 }
 
 div#header nav ul {

@@ -1,7 +1,20 @@
 <div id="header">
   <nav>
     <div>
-      <input placeholder="Search or jump to" type="search" name="search" id="search-bar" />
+      <form name="send" id="form-res-in" method="get">
+        <input placeholder="Search or jump to" type="search" name="search" id="search-bar" />
+        <button name="send" type="submit" id="search-button">
+          <i data-feather="search"></i>
+        </button>
+        <?php
+        if (isset($_GET["send"])) {
+          $query = isset($_GET["search"]) ? $_GET["search"] : 'elias';
+          echo "
+              <script>window.location.href='/web/public/results/users.php?query_search=$query'</script>
+            ";
+        }
+        ?>
+      </form>
     </div>
 
     <ul class="list-item-group">
