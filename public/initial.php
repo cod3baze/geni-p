@@ -14,12 +14,9 @@
 </head>
 
 <body>
-  <?php echo
-    "<script>
-      var isAuth = window.isAuthenticated;
-      isAuth();
-    </script>";
-  ?>
+  <script>
+    var isAuth = window.isAuthenticated;
+  </script>";
   <div id="container">
     <aside id="form-aside">
       <div id="anuncios">
