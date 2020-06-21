@@ -26,8 +26,9 @@ div#learn-theme-group h3 {
   padding: 30px;
 }
 
-div#learning-lessons ul li {
-  background: #232229;
+/* 232229 */
+div#learning-lessons ul#plist_over li#list-over {
+  background: red;
   margin-bottom: 5px;
   color: #999999;
   display: flex;
@@ -35,13 +36,16 @@ div#learning-lessons ul li {
   padding-left: 15px;
   cursor: pointer;
 }
+ul#plist_over li#list-over a {
+  display: flex;
+}
 
-div#learning-lessons ul li span {
+div#learning-lessons ul#plist_over li#list-over a span {
   font-size: 14px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-div#learning-lessons ul li.isLearning {
+div#learning-lessons ul#plist_over li.isLearning {
   background: #28272f;
   box-shadow: 0 0 2px #6272a4;
   color: #d8d6d6;

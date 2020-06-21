@@ -11,7 +11,7 @@
         </a>
       </li>
       <li id="menu-group">
-        <a id="menu-item" href="/web/public/issues.php">
+        <a id="menu-item" href="/web/public/learning.php?issue_id=1">
           Issues
         </a>
       </li>

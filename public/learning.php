@@ -1,3 +1,9 @@
+<?php
+require('../src/database/connection.php');
+
+$issue_id = isset($_GET["issue_id"]) ? $_GET["issue_id"] : null;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,38 +26,28 @@
   <?php require('../components/header.php') ?>
 
   <div id="learning-screen-vw">
-    <aside id="learning-vw">
-      <div id="learn-theme-group">
-        <h3>JavaScript</h3>
-      </div>
-      <div id="learning-lessons">
-        <ul>
-          <li className="isLearning">
-            <span>
-              <i color="#FFFFA5" data-feather="pie-chart"></i>
-            </span>
-            <span>Introdução ao JS</span>
-          </li>
-          <li>
-            <span>
-              <i color="#FFFFA5" data-feather="pie-chart"></i>
-            </span>
-            <span>Introdução ao JS</span>
-          </li>
-          <li>
-            <span>
-              <i color="#FFFFA5" data-feather="pie-chart"></i>
-            </span>
-            <span>Introdução ao JS</span>
-          </li>
-        </ul>
-      </div>
-    </aside>
     <main id="learning-vw">
       <div id="transcription">
-        <script>
-          const divx = document.querySelector('div#transcription').innerHTML = marked(` # Lorem ipsum dolor, sit amet consectetur adipisicing elit. \n\n > only teste`)
-        </script>
+        <?php
+        $sql = "SELECT * FROM issue WHERE id='$issue_id'";
+        $query = mysqli_query($link, $sql);
+        if ($query && $issue_id) {
+          while ($data = mysqli_fetch_array($query)) {
+            $body = utf8_encode($data["body"]);
+            echo
+              "
+              <script>
+                const divx = document.querySelector('div#transcription').innerHTML = marked(`" . $body . "`);
+              </script>
+            ";
+          }
+        } else {
+          echo "
+            <h1 style='color: red;'>ERRO AO PEGAR OS DADOS!</h1><br/>
+            ";
+        }
+
+        ?>
       </div>
     </main>
   </div>
